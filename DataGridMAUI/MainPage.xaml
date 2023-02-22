@@ -1,11 +1,4 @@
-# how-to-set-rounded-corner-for-maui-datagrid
-
-You can set the rounded corner for the .NET [MAUI DataGrid](https://www.syncfusion.com/maui-controls/maui-datagrid)(SfDataGrid) by loading the DataGrid in the [Border](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/border?view=net-maui-7.0).
-
-## XAML
-Define the StrokeShape as RoundRectangle with CornerRadius as 10 for the border to apply rounded corners to the DataGrid.
-
-```XML
+﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:DataGridMAUI"
@@ -14,7 +7,7 @@ Define the StrokeShape as RoundRectangle with CornerRadius as 10 for the border 
     <ContentPage.BindingContext>
         <local:ViewModel x:Name="ViewModel"></local:ViewModel>
     </ContentPage.BindingContext>
-<Border Stroke="LightGray"
+    <Border Stroke="LightGray"
         StrokeThickness="2"
         StrokeShape="RoundRectangle 10,10,10,10" VerticalOptions="Start"
         HorizontalOptions="Center">
@@ -27,7 +20,5 @@ Define the StrokeShape as RoundRectangle with CornerRadius as 10 for the border 
             </syncfusion:SfDataGrid.Columns>
         </syncfusion:SfDataGrid>
     </Border>
+   
 </ContentPage>
-```
-
-![RoundedCorner](RoundedCorner.png)
