@@ -7,18 +7,29 @@
     <ContentPage.BindingContext>
         <local:ViewModel x:Name="ViewModel"></local:ViewModel>
     </ContentPage.BindingContext>
+    
     <Border Stroke="LightGray"
         StrokeThickness="2"
         StrokeShape="RoundRectangle 10,10,10,10" VerticalOptions="Start"
         HorizontalOptions="Center">
-        <syncfusion:SfDataGrid x:Name="dataGrid" AutoGenerateColumnsMode="None" GridLinesVisibility="Both" HeaderGridLinesVisibility="Both" WidthRequest="300" HeightRequest="520"  ItemsSource="{Binding OrderInfoCollection}" >
-            <syncfusion:SfDataGrid.Columns>
-                <syncfusion:DataGridNumericColumn MappingName="OrderID" Format="D">
-                </syncfusion:DataGridNumericColumn>
-                <syncfusion:DataGridTextColumn MappingName="Customer" HeaderText="Name"></syncfusion:DataGridTextColumn>
-                <syncfusion:DataGridTextColumn MappingName="Country"></syncfusion:DataGridTextColumn>
-            </syncfusion:SfDataGrid.Columns>
-        </syncfusion:SfDataGrid>
+        <Grid>
+            <syncfusion:SfDataGrid x:Name="dataGrid"
+                                   AutoGenerateColumnsMode="None"
+                                   GridLinesVisibility="Both"
+                                   HeaderGridLinesVisibility="Both"
+                                   WidthRequest="300"
+                                   HeightRequest="520"
+                                   ItemsSource="{Binding OrderInfoCollection}">
+                <syncfusion:SfDataGrid.Columns>
+                    <syncfusion:DataGridNumericColumn MappingName="OrderID"
+                                                      Format="D">
+                    </syncfusion:DataGridNumericColumn>
+                    <syncfusion:DataGridTextColumn MappingName="Customer"
+                                                   HeaderText="Name"></syncfusion:DataGridTextColumn>
+                    <syncfusion:DataGridTextColumn MappingName="Country"></syncfusion:DataGridTextColumn>
+                </syncfusion:SfDataGrid.Columns>
+            </syncfusion:SfDataGrid>
+        </Grid>
     </Border>
    
 </ContentPage>
